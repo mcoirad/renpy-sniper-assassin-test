@@ -1,0 +1,65 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 155, in script
+    "Shoot out the back right window of the car!"
+  File "game/script.rpy", line 115, in execute
+    screen sniper_minigame:
+  File "game/script.rpy", line 115, in execute
+    screen sniper_minigame:
+  File "game/script.rpy", line 118, in execute
+    imagemap:
+  File "game/script.rpy", line 118, in keywords
+    imagemap:
+NameError: name 'animated_scope' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 155, in script
+    "Shoot out the back right window of the car!"
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\ast.py", line 690, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\exports.py", line 1316, in say
+    who(what, *args, **kwargs)
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\character.py", line 1131, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\character.py", line 842, in do_display
+    **display_args)
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\character.py", line 591, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\ui.py", line 289, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\display\core.py", line 2687, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\display\core.py", line 3071, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\display\core.py", line 531, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\display\core.py", line 531, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\display\core.py", line 531, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\display\screen.py", line 424, in visit_all
+    callback(self)
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\display\core.py", line 3071, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\display\screen.py", line 434, in per_interact
+    self.update()
+  File "D:\Downloads\renpy-7.1.0-sdk\renpy\display\screen.py", line 619, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 115, in execute
+    screen sniper_minigame:
+  File "game/script.rpy", line 115, in execute
+    screen sniper_minigame:
+  File "game/script.rpy", line 118, in execute
+    imagemap:
+  File "game/script.rpy", line 118, in keywords
+    imagemap:
+  File "<screen language>", line 122, in <module>
+NameError: name 'animated_scope' is not defined
+
+Windows-8-6.2.9200
+Ren'Py 7.2.0.424
+test-environ 1.0
+Sat Nov 09 13:26:11 2019
